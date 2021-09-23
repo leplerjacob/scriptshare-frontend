@@ -7,8 +7,8 @@ const Content = () => {
     const {slug} = useParams()
     const [content, setContent] = useState(null)
 
-    useEffect(() => {
-        setContent(getCode(slug))
+    useEffect(async () => {
+        setContent(await getCode(slug))
     }, [slug])
 
     return (
