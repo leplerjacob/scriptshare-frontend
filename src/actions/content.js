@@ -10,8 +10,8 @@ export const create = async (content) => {
     .catch((err) => err);
 };
 
-export const getCode = (slug) => {
-  return axios
+export const getCode = async (slug) => {
+  return await axios
     .get(BASE_URL + `scripts/${slug}`)
     .then((res) => res.data)
     .catch((err) => err);
